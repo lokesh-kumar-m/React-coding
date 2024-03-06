@@ -7,7 +7,7 @@ import TabButton from "./components/tabButton";
 
 
 function App() {
-  const [tabContent,setContent]=useState('components')
+  const [tabContent,setContent]=useState('')
 
   function handleClick(element){
     setContent(element)
@@ -19,10 +19,9 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
-            <Cards {...CORE_CONCEPTS[0]}/>
-            <Cards {...CORE_CONCEPTS[1]}/>
-            <Cards {...CORE_CONCEPTS[2]}/>
-            <Cards {...CORE_CONCEPTS[3]}/>
+            {CORE_CONCEPTS.map((conceptelements,id)=>
+              <Cards {...conceptelements}/>
+            )}
           </ul>
         </section>
         <section id="examples">
@@ -33,16 +32,14 @@ function App() {
             <TabButton clickEvent={()=>handleClick("props")}>Props</TabButton>
             <TabButton clickEvent={()=>handleClick("state")}>State</TabButton>
           </menu>
-          <div id="tab-content">
-            <h3>{EXAMPLES[tabContent].title}</h3>
-            <p>{EXAMPLES[tabContent].description}</p>
-            <pre>
-              <code>
-              {EXAMPLES[tabContent].code}
-              </code>
-            </pre>
-          </div>
-          {tabContent}
+            {!tabContent?<p>Please choose a topic</p> : 
+            (<div id="tab-content"><h3>{EXAMPLES[tabContent].title}</h3><p>{EXAMPLES[tabContent].description}</p><pre>
+                <code>
+                  {EXAMPLES[tabContent].code}
+                </code>
+              </pre></div>)
+            }
+
         </section>
       </main>
     </div>
