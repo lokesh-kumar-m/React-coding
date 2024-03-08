@@ -1,6 +1,7 @@
 import React from "react";
 import conceptImage from '../assets/react-core-concepts.png'
-const words=['Fundamental','Core','Crucial']
+
+const words=['Important','Core','Crucial']
 function getRandomWord(length){
     return Math.floor(Math.random()*(length));
 }
@@ -11,10 +12,9 @@ const Header = () => {
     return(
       <header>
           <img src={conceptImage} alt="Stylized atom" />
-          <h1>React Essentials</h1>
+          <h1>Coding Essentials</h1>
           <p>
-            {word} React concepts you will need for almost any app you are
-            going to build!
+            Some of the most {word} concepts of programming and problem solving!
           </p>
         </header>
     );

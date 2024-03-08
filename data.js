@@ -6,25 +6,25 @@ import stateImg from './src/assets/state-mgmt.png';
 export const CORE_CONCEPTS = [
   {
     image: componentsImg,
-    title: 'Components',
+    title: 'Dynamic Programing',
     description:
-      'The core UI building block - compose the user interface by combining multiple components.',
+      'DP or Dynamic Programming is a problem-solving technique that involves breaking down complex problems into smaller, simpler sub-problems and memorizing them.',
   },
   {
     image: jsxImg,
-    title: 'JSX',
+    title: 'Linked Lists',
     description:
-      'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
+      'Linked lists offer efficiency in dynamic memory allocation, employing nodes that store data along with references to next node.',
   },
   {
     image: propsImg,
-    title: 'Props',
+    title: 'Trees',
     description:
       'Make components configurable (and therefore reusable) by passing input data to them.',
   },
   {
     image: stateImg,
-    title: 'State',
+    title: 'Graphs',
     description:
       'React-managed data which, when changed, causes the component to re-render & the UI to update.',
   },
