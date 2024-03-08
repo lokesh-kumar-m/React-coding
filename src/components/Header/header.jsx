@@ -1,5 +1,7 @@
 import React from "react";
-import conceptImage from '../assets/react-core-concepts.png'
+import conceptImage from '../../assets/react-core-concepts.png'
+
+import './header.css'
 
 const words=['Important','Core','Crucial']
 function getRandomWord(length){
