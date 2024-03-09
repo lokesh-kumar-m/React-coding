@@ -24,7 +24,7 @@ const Explaination= () =>{
             <h3>{EXAMPLES[tabContent].title}</h3>
             <p>{EXAMPLES[tabContent].description}</p>
             <p>{EXAMPLES[tabContent].representation}</p>
-            <pre className="preformating">
+            <pre>
               <code>
                 {EXAMPLES[tabContent].code}
               </code>
